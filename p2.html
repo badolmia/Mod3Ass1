@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMaxNumber(numbers) {
+            if (numbers.length === 0) {
+                return null;
+            }
+
+            let max = numbers[0];
+            for (let i = 1; i < numbers.length; i++) {
+                if (numbers[i] > max) {
+                    max = numbers[i];
+                }
+            }
+
+            return max;
+        }
+
+
+        const numbers1 = [5, 9, 13, 20];
+        document.writeln(findMaxNumber(numbers1), "<br>"); // Output: 20
+
+        const numbers2 = [5, 9, 13];
+        document.writeln(findMaxNumber(numbers2), "<br>"); // Output: 13
+
+        const emptyArray = [];
+        document.writeln(findMaxNumber(emptyArray), "<br>"); // Output: null
+
+    </script>
+</body>
+
+</html>
